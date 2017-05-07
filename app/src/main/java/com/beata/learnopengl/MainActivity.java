@@ -7,6 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.beata.learnopengl.orthom.OrthomActivity;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         findViewById(R.id.btn_lessOne).setOnClickListener(this);
+        findViewById(R.id.btn_orthom).setOnClickListener(this);
     }
 
     @Override
@@ -39,6 +42,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_lessOne:
                 Intent intent = new Intent(this, LessonOneActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.btn_orthom:
+                Intent intent1 = new Intent(this, OrthomActivity.class);
+                startActivity(intent1);
                 break;
             default:
                 break;
